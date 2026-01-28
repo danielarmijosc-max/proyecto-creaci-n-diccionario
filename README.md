@@ -1,6 +1,8 @@
 # proyecto-creaci-n-diccionario
 Contiene programación para generar la posible contraseña del proyecto
 
+
+
 #!/bin/bash
 
 # Limpiar salida anterior
@@ -25,7 +27,7 @@ while read nombre; do
       combos+=("${num:0:j}${nombre}${num:j}")
     done
 
-    # 4. Variaciones de may  sculas/min  sculas
+    # 4. Variaciones de mayusculas/minusculas
     for palabra in "${combos[@]}"; do
       echo "${palabra,,}" >> diccionario.txt          # minusculas
       echo "${palabra^^}" >> diccionario.txt          # MAYUSCULAS
