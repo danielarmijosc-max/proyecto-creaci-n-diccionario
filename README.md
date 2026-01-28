@@ -3,13 +3,13 @@ Contiene programación para generar la posible contraseña del proyecto
 
 
 
-#!/bin/bash
+    #!/bin/bash
 
-# Limpiar salida anterior
-> diccionario.txt
+    # Limpiar salida anterior
+    > diccionario.txt
 
-while read nombre; do
-  while read num; do
+    while read nombre; do
+    while read num; do
 
     # 1. nombre + numero y numero + nombre
     combos=(
@@ -34,8 +34,8 @@ while read nombre; do
       echo "${palabra^}"  >> diccionario.txt          # Capitalizada
     done
 
-  done < anios.txt
-done < nombres.txt
+    done < anios.txt
+    done < nombres.txt
 
-# Eliminar duplicados
-sort -u diccionario.txt -o diccionario.txt
+    # Eliminar duplicados
+    sort -u diccionario.txt -o diccionario.txt
